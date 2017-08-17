@@ -8,7 +8,7 @@ package:
   version: {{ libgfortran_version|join('.') }}
 
 build:
-  number: 0
+  number: 1
   skip: true                                                  # [not osx]
   always_include_files:
     - lib/libgfortran.dylib                                   # [osx]
@@ -19,6 +19,9 @@ build:
     # out in the long term.
     - lib/libquadmath.dylib                                   # [osx]
     - lib/libquadmath.{{ libquadmath_version[0] }}.dylib      # [osx]
+
+    - lib/libgomp.1.dylib                                     # [osx]
+    - lib/libgomp.dylib                                       # [osx]
 
     # Including libgcc_s for the time
     # being. This will need to be broken
@@ -57,5 +60,6 @@ about:
 extra:
   recipe-maintainers:
     - jakirkham
+    - mingwandroid
     - msarahan
     - pelson
