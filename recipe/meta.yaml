@@ -4,7 +4,7 @@
 
 
 package:
-  name: libgfortran
+  name: libgfortran_{{ target_platform }}
   # This is hacked to be above the broken one in defaults (which is really libgfortran 2)
   version: 3.0.1
 
