@@ -4,7 +4,7 @@
 
 
 package:
-  name: libgfortran-ng
+  name: libgfortran
   # This is hacked to be above the broken one in defaults (which is really libgfortran 2)
   version: 3.0.1
 
@@ -33,7 +33,7 @@ build:
 
 requirements:
   build:
-    - gcc 4.8.5
+    - gcc ==4.8.5
 
 test:
   commands:
